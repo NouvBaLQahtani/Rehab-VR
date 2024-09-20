@@ -71,3 +71,4 @@ Rehab/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 Rehab/[Aa]ssets/[Ss]treamingAssets/aa.meta
 Rehab/[Aa]ssets/[Ss]treamingAssets/aa/*
 .DS_Store
+/Rehab
