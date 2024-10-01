@@ -273,26 +273,22 @@ namespace UniGLTF
             {
                 var url = "file:///" + tmp.Replace("\\", "/");
                 Debug.LogFormat("UnityWebRequest: {0}", url);
-                using (var m_uwr = new WWW(url))
+            using (var m_uwr = UnityWebRequestTexture.GetTexture(url))
+            {
+                // Send request and wait for download to complete
+                yield return m_uwr.SendWebRequest();
+
+                // Check for network errors or HTTP errors
+                if (m_uwr.result == UnityWebRequest.Result.ConnectionError || m_uwr.result == UnityWebRequest.Result.ProtocolError)
                 {
-                    yield return m_uwr;
-
-                    // wait for request
-                    while (!m_uwr.isDone)
-                    {
-                        yield return null;
-                    }
-
-                    if (!string.IsNullOrEmpty(m_uwr.error))
-                    {
-                        Debug.Log(m_uwr.error);
-                        yield break;
-                    }
-
-                    // Get downloaded asset bundle
-                    Texture = m_uwr.textureNonReadable;
-                    Texture.name = m_textureName;
+                    Debug.LogError(m_uwr.error);
+                    yield break;
                 }
+
+                // Get the downloaded texture
+                Texture = DownloadHandlerTexture.GetContent(m_uwr);
+                Texture.name = m_textureName;
+            }
             }
         }
     }
