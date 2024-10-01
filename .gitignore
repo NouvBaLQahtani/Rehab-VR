@@ -73,3 +73,8 @@ crashlytics-build.properties
 .DS_Store
 /Library
 /Library/Bee
+.vsconfig
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/ProjectSettings.asset
