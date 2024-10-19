@@ -1060,7 +1060,7 @@ GameObject:
   - component: {fileID: 232205700}
   - component: {fileID: 232205699}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Capsule_USER REFRENCE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4548,7 +4548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335444980}
   m_Layer: 0
-  m_Name: "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD.003_3"
+  m_Name: SECONDLEVEL BULDING
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5115,7 +5115,7 @@ GameObject:
   - component: {fileID: 1582869386}
   - component: {fileID: 1582869385}
   m_Layer: 0
-  m_Name: Object_10
+  m_Name: BULDING_SCENE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
