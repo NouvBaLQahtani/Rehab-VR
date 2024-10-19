@@ -7,14 +7,21 @@ public class ZiplineController : MonoBehaviour
     public GameObject zipline; // Assign your zipline GameObject here
     public Transform ziplineStart; // Set your zipline start position
     public Transform ziplineEnd; // Set your zipline end position
-    public float speed = 5f; // Speed of movement
+    public float speed = 2f; // Speed of movement
 
     private bool isZipping = false;
+    private Transform playerTransform; // Reference to the player's transform
 
     void Start()
     {
+        // Make zipline visible from the start
+        zipline.SetActive(true);
+
+        // Assuming the script is attached to the player or you can get the player transform
+        playerTransform = transform; // Use this if attached to the player object
+
+        // Assign button listener
         startButton.onClick.AddListener(StartZipline);
-        zipline.SetActive(false); // Hide zipline initially
     }
 
     void Update()
@@ -22,12 +29,14 @@ public class ZiplineController : MonoBehaviour
         if (isZipping)
         {
             float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, ziplineEnd.position, step);
+            playerTransform.position = Vector3.MoveTowards(playerTransform.position, ziplineEnd.position, step);
 
-            if (Vector3.Distance(transform.position, ziplineEnd.position) < 0.001f)
+            // Maintain the height of the zipline
+            playerTransform.position = new Vector3(playerTransform.position.x, ziplineStart.position.y, playerTransform.position.z);
+
+            if (Vector3.Distance(playerTransform.position, ziplineEnd.position) < 0.001f)
             {
                 isZipping = false;
-                zipline.SetActive(false); // Hide zipline after use
                 Debug.Log("Zipline Experience Complete");
             }
         }
@@ -38,10 +47,9 @@ public class ZiplineController : MonoBehaviour
         if (!isZipping)
         {
             isZipping = true;
-            zipline.SetActive(true);
-            Debug.Log("Starting Zipline Experience");
             // Set the player's starting position at the zipline start point
-            transform.position = ziplineStart.position;
+            playerTransform.position = new Vector3(ziplineStart.position.x, ziplineStart.position.y, ziplineStart.position.z);
+            Debug.Log("Starting Zipline Experience");
         }
     }
 }
