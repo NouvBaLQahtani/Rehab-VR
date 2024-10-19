@@ -6,7 +6,7 @@ public class CoinCollect : MonoBehaviour
 {
     public AudioClip collectSound; // Drag and drop the sound effect here in the Unity Inspector
     private AudioSource audioSource; // AudioSource to play the sound
-    private static int totalCoins = 5; // Set the total number of coins to 5
+    private static int totalCoins = 6; // Set the total number of coins to 5
     public static int remainingCoins; // Remaining coins counter
 
     void Start()

@@ -2301,7 +2301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 908697205}
-  m_MoveSpeed: 1
+  m_MoveSpeed: 8
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -4325,7 +4325,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6359,7 +6359,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7291,23 +7291,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8103347187271452935, guid: 948d68d753a180f4b8d68cf6487b2eed, type: 3}
       propertyPath: m_Size.y
-      value: 0.47172785
+      value: 1.6411282
       objectReference: {fileID: 0}
     - target: {fileID: 8103347187271452935, guid: 948d68d753a180f4b8d68cf6487b2eed, type: 3}
       propertyPath: m_Size.z
-      value: 2.1459312
+      value: 2.3535888
       objectReference: {fileID: 0}
     - target: {fileID: 8103347187271452935, guid: 948d68d753a180f4b8d68cf6487b2eed, type: 3}
       propertyPath: m_Center.x
-      value: 0.0018439933
+      value: 0.0018440477
       objectReference: {fileID: 0}
     - target: {fileID: 8103347187271452935, guid: 948d68d753a180f4b8d68cf6487b2eed, type: 3}
       propertyPath: m_Center.y
-      value: 0.08031338
+      value: 0.1084434
       objectReference: {fileID: 0}
     - target: {fileID: 8103347187271452935, guid: 948d68d753a180f4b8d68cf6487b2eed, type: 3}
       propertyPath: m_Center.z
-      value: 0.016457867
+      value: -0.050767187
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
